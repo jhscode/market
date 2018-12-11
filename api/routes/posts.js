@@ -15,7 +15,7 @@ router.get('/', async (req, res, next ) => {
 router.get('/:postid', async (req, res, next) => {
   try {
     const { postid } = req.params;
- 
+    
   } catch(e) {
     next(e);
   }
