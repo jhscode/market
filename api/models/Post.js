@@ -1,5 +1,4 @@
-const { Schemam, model } = require('mongoose');
-const bcrypt = require('bcryptjs');
+const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
   title: {
@@ -16,4 +15,6 @@ const userSchema = new Schema({
   }
 });
 
-userSchema.pre('')
+const Post = mongoose.model('Post', userSchema);
+
+module.exports = Post;
