@@ -10,7 +10,7 @@ router.post('/', async (req, res, next) => {
     // Save that user into th edatabse
     const user = new User({ email, password });
     const doc = await user.save();
-    res.status(200).send({ data: [doc] });
+    res.status(200).json({ data: [doc] });
   } catch(e) {
     // If there's an error, send back the error
     next(e);

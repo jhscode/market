@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', async (req, res, next ) => {
   try {
     const docs = await Todo.find({});
-    res.send(200).send({ data: docs });
+    res.status(200).json({ data: docs });
   } catch(e) {
     next(e);
   }

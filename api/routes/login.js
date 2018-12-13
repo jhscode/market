@@ -11,7 +11,7 @@ router.post('/', async (req, res, next) => {
     // 3. If the posted password matches the document's password
     if (user.password === password) {
       // 4. Send back the full user document
-      res.status(200).send({ data: [user] });
+      res.status(200).json({ data: [user] });
     } else {
       throw new Error('unauthorized');
     }
