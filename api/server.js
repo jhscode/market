@@ -21,5 +21,5 @@ app.use('/posts', posts);
 app.use((err, req, res, next) => {
     res.status(401).json({ err: err.message });
 });
-
+    
 module.exports = app;

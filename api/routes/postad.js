@@ -7,6 +7,7 @@ router.post('/', async (req, res, next) => {
   const post = new Post({ email, price, desc });
   try {
     const doc = await post.save();
+    res.status(201).json()
   } catch(e) {
     next(e);
   }

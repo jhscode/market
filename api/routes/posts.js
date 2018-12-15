@@ -11,6 +11,7 @@ router.get('/', async (req, res, next ) => {
   }
 });
 
+
 // GET individual post
 router.get('/:postid', async (req, res, next) => {
   try {
