@@ -7,9 +7,10 @@ router.post('/', async (req, res, next) => {
   const { email, password } = req.body;
   // Create a new user using the User model
   try {
-    // Save that user into th edatabse
+    // Save that user into the database
     const user = new User({ email, password });
     const doc = await user.save();
+    console.log(doc);
     res.status(200).json({ data: [doc] });
   } catch(e) {
     // If there's an error, send back the error
