@@ -3,13 +3,13 @@ import PostAd from './PostAd';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
+import Header from './Header';
+
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <button>Sign Up</button>
-        <button>Login</button>
-        <button>Post Ad</button>
+        <Header />
       </Fragment>
     );
   }
